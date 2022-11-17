@@ -15,15 +15,15 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "aws_instance" "web" {
-  monitoring = true
+  monitoring    = true
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t3.micro"
 
   tags = {
     Name                 = "HelloWorld"
-    git_commit           = "cd9b474773b7808a8d7d52c5f76a537ee824d85f"
+    git_commit           = "2e0b7890a987733573e0ba841a88a03278a6c370"
     git_file             = "terraform/simple_instance/ec2.tf"
-    git_last_modified_at = "2022-11-17 06:44:13"
+    git_last_modified_at = "2022-11-17 06:45:34"
     git_last_modified_by = "98189180+taysmith-workshop@users.noreply.github.com"
     git_modifiers        = "98189180+taysmith-workshop"
     git_org              = "taysmith-workshop"
